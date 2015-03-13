@@ -1,0 +1,37 @@
+<html ng-app="app">
+<head>
+    <title>Angular OneTimeBinding</title>
+    <script src="lib/angular.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="profileCtrl.js" type="text/javascript"></script>
+</head>
+<body ng-controller="profileCtrl">
+
+    <div>
+        <h1>Angular OneTimeBinding</h1>
+        <br />
+        <table>
+            <tr ng-repeat="profile in ::profiles">
+                <td>
+                    {{profile.Id}}
+                </td>
+                <td>
+                    {{profile.Name}}
+                </td>
+                <td>
+                    {{profile.Address}}
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <button ng-click="addProfiles()">addProfiles</button>
+        <button ng-click="getWatchers()">getWatchers</button>
+
+        <div>
+            <h3>OneTimeBinding Watchers Count :::  {{totalWatchers}}</h3>
+        </div>
+
+    </div>
+</body>
+</html>
